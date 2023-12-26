@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Passwort</title>
+  <title>Eingabe und Ausgabe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #formContainer {
+      width: 80%;
+      max-width: 400px; /* Begrenzung der Breite */
+      text-align: center; /* Zentrierung des Inhalts */
     }
     #userInput {
-      width: 80%;
+      width: 100%;
       padding: 10px;
       margin-bottom: 10px;
       border-radius: 5px;
@@ -17,7 +26,7 @@
       font-size: 16px;
     }
     #submitButton {
-      width: 80%;
+      width: 100%;
       padding: 10px;
       border-radius: 5px;
       border: none;
@@ -29,16 +38,17 @@
     #output {
       margin-top: 20px;
       font-size: 18px;
+      text-align: center;
     }
   </style>
-<script>
+  <script>
     function checkInput() {
-      var userInput = document.getElementById('userInput').value.toLowerCase(); // Umwandlung in Kleinbuchstaben
+      var userInput = document.getElementById('userInput').value.toLowerCase();
 
-      if (userInput === 'see') { // Vergleich in Kleinbuchstaben
+      if (userInput === 'korrekteeingabe') {
         document.getElementById('output').innerHTML = 'Richtige Eingabe!';
       } else {
-        document.getElementById('output').innerHTML = 'Falsches Passwort. Versuche es erneut.';
+        document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
       }
 
       return false;
@@ -46,10 +56,13 @@
   </script>
 </head>
 <body>
-  <form onsubmit="return checkInput()">
-    <input type="text" id="userInput" placeholder="Bitte Passwort eingeben" autocorrect="off" autocapitalize="none">
-    <button type="submit" id="submitButton">Let's Go</button>
-  </form>
-  <p id="output"></p>
+  <div id="formContainer">
+    <form onsubmit="return checkInput()">
+      <label for="userInput">Eingabe: </label>
+      <input type="text" id="userInput" placeholder="Gib hier deine Eingabe ein" autocorrect="off" autocapitalize="none">
+      <button type="submit" id="submitButton">Bestätigen</button>
+    </form>
+    <p id="output"></p>
+  </div>
 </body>
 </html>
