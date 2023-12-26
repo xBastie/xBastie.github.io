@@ -2,27 +2,54 @@
 <html>
 <head>
   <title>Eingabe und Ausgabe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #userInput {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    #submitButton {
+      width: 80%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
   <script>
     function checkInput() {
       var userInput = document.getElementById('userInput').value;
 
-      // Hier wird die Bedingung für die richtige Eingabe geprüft
-      if (userInput === 'See') {
+      if (userInput === 'KorrekteEingabe') {
         document.getElementById('output').innerHTML = 'Richtige Eingabe!';
       } else {
         document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
       }
 
-      // Dies verhindert das Absenden des Formulars
       return false;
     }
   </script>
 </head>
 <body>
   <form onsubmit="return checkInput()">
-    <label for="userInput">Zugang gesperrt, bitte Passwort eingeben</label>
-    <input type="text" id="userInput">
-    <button type="submit">Eingabe</button>
+    <label for="userInput">Eingabe: </label>
+    <input type="text" id="userInput" placeholder="Gib hier deine Eingabe ein" autocorrect="off" autocapitalize="none">
+    <button type="submit" id="submitButton">Bestätigen</button>
   </form>
   <p id="output"></p>
 </body>
