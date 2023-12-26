@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Eingabe und Ausgabe</title>
+  <script>
+    function checkInput() {
+      var userInput = document.getElementById('userInput').value;
+
+      // Hier wird die Bedingung für die richtige Eingabe geprüft
+      if (userInput === 'KorrekteEingabe') {
+        document.getElementById('output').innerHTML = 'Richtige Eingabe!';
+      } else {
+        document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
+      }
+
+      // Dies verhindert das Absenden des Formulars
+      return false;
+    }
+  </script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <form onsubmit="return checkInput()">
+    <label for="userInput">Eingabe: </label>
+    <input type="text" id="userInput">
+    <button type="submit">Bestätigen</button>
+  </form>
+  <p id="output"></p>
 </body>
 </html>
