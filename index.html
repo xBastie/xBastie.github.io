@@ -40,6 +40,10 @@
       font-size: 18px;
       text-align: center;
     }
+    .correctOutput {
+      font-size: 50px; /* Größere Schrift bei richtiger Ausgabe */
+      color: green; /* Dunkleres Blau bei richtiger Ausgabe */
+    }
   </style>
   <script>
     function checkInput() {
@@ -47,8 +51,10 @@
 
       if (userInput === 'see') {
         document.getElementById('output').innerHTML = 'Richtige Eingabe!';
+        document.getElementById('output').classList.add('correctOutput'); // Hinzufügen der Klasse für richtige Ausgabe
       } else {
         document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
+        document.getElementById('output').classList.remove('correctOutput'); // Entfernen der Klasse, falls sie zuvor hinzugefügt wurde
       }
 
       return false;
@@ -56,14 +62,12 @@
   </script>
 </head>
 <body>
-<center>
   <div id="formContainer">
     <form onsubmit="return checkInput()">
-      <input type="text" id="userInput" placeholder="Bitte Passwort eingeben..." autocorrect="off" autocapitalize="none">
-      <button type="submit" id="submitButton">Let's Go</button>
+      <input type="text" id="userInput" placeholder="Bitte Passwort..." autocorrect="off" autocapitalize="none">
+      <button type="submit" id="submitButton">Bestätigen</button>
     </form>
     <p id="output"></p>
   </div>
- </center>
 </body>
 </html>
