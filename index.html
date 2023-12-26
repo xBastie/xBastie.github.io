@@ -45,7 +45,7 @@
     function checkInput() {
       var userInput = document.getElementById('userInput').value.toLowerCase();
 
-      if (userInput === 'korrekteeingabe') {
+      if (userInput === 'see') {
         document.getElementById('output').innerHTML = 'Richtige Eingabe!';
       } else {
         document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
@@ -56,13 +56,14 @@
   </script>
 </head>
 <body>
+<center>
   <div id="formContainer">
     <form onsubmit="return checkInput()">
-      <label for="userInput">Eingabe: </label>
-      <input type="text" id="userInput" placeholder="Gib hier deine Eingabe ein" autocorrect="off" autocapitalize="none">
-      <button type="submit" id="submitButton">Bestätigen</button>
+      <input type="text" id="userInput" placeholder="Bitte Passwort eingeben..." autocorrect="off" autocapitalize="none">
+      <button type="submit" id="submitButton">Let's Go</button>
     </form>
     <p id="output"></p>
   </div>
+ </center>
 </body>
 </html>
