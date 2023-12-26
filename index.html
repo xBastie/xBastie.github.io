@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Eingabe und Ausgabe</title>
+  <title>Passwort</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -35,7 +35,7 @@
     function checkInput() {
       var userInput = document.getElementById('userInput').value;
 
-      if (userInput === 'KorrekteEingabe') {
+      if (userInput === 'SEE') {
         document.getElementById('output').innerHTML = 'Richtige Eingabe!';
       } else {
         document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
@@ -47,9 +47,8 @@
 </head>
 <body>
   <form onsubmit="return checkInput()">
-    <label for="userInput">Eingabe: </label>
-    <input type="text" id="userInput" placeholder="Gib hier deine Eingabe ein" autocorrect="off" autocapitalize="none">
-    <button type="submit" id="submitButton">Bestätigen</button>
+    <input type="text" id="userInput" placeholder="Passwort eingeben" autocorrect="off" autocapitalize="yes">
+    <button type="submit" id="submitButton">Let's Go</button>
   </form>
   <p id="output"></p>
 </body>
