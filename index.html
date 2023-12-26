@@ -7,7 +7,7 @@
       var userInput = document.getElementById('userInput').value;
 
       // Hier wird die Bedingung für die richtige Eingabe geprüft
-      if (userInput === 'KorrekteEingabe') {
+      if (userInput === 'See') {
         document.getElementById('output').innerHTML = 'Richtige Eingabe!';
       } else {
         document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
@@ -20,9 +20,9 @@
 </head>
 <body>
   <form onsubmit="return checkInput()">
-    <label for="userInput">Eingabe: </label>
+    <label for="userInput">Zugang gesperrt, bitte Passwort eingeben</label>
     <input type="text" id="userInput">
-    <button type="submit">Bestätigen</button>
+    <button type="submit">Eingabe</button>
   </form>
   <p id="output"></p>
 </body>
