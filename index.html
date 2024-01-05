@@ -14,7 +14,7 @@
     }
     #formContainer {
       width: 80%;
-      max-width: 400px; /* Begrenzung der Breite */
+      max-width: 450px; /* Begrenzung der Breite */
       text-align: center; /* Zentrierung des Inhalts */
     }
     #userInput {
@@ -43,10 +43,11 @@
  <script src="script.js"></script>
 </head>
 <body>
-<p>Wie heißt die Haltestelle an der wir uns zum ersten Mal trafen?</p> 
+
   <div id="formContainer">
+  <p>Wie heißt die Haltestelle an der wir uns zum ersten Mal trafen?</p> 
     <form onsubmit="return checkInput()">
-      <input type="text" id="userInput" placeholder="...?" autocorrect="off" autocapitalize="none">
+      <input type="text" id="userInput" placeholder="..." autocorrect="off" autocapitalize="none">
       <button type="submit" id="submitButton">Let's Go</button>
     </form>
     <p id="output"></p>
