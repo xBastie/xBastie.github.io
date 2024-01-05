@@ -18,7 +18,7 @@
       text-align: center; /* Zentrierung des Inhalts */
     }
     #userInput {
-      width: 150%;
+      width: 80%;
       padding: 10px;
       margin-bottom: 10px;
       border-radius: 5px;
@@ -43,9 +43,10 @@
  <script src="script.js"></script>
 </head>
 <body>
+<p>Wie heißt die Haltestelle an der wir uns zum ersten Mal trafen?</p> 
   <div id="formContainer">
     <form onsubmit="return checkInput()">
-      <input type="text" id="userInput" placeholder="Wie heißt die Haltestellt an der wir uns zum ersten Mal getroffen haben?" autocorrect="off" autocapitalize="none">
+      <input type="text" id="userInput" placeholder="...?" autocorrect="off" autocapitalize="none">
       <button type="submit" id="submitButton">Let's Go</button>
     </form>
     <p id="output"></p>
