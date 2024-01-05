@@ -1,8 +1,8 @@
     function checkInput() {
       var userInput = document.getElementById('userInput').value.toLowerCase();
 
-      if (userInput === 'see') {
-        document.getElementById('output').innerHTML = '18';
+      if (userInput === 'wilhelminenstraße') {
+        document.getElementById('output').innerHTML = '51.076303 13.750260';
         document.getElementById('output').classList.add('correctOutput'); // Hinzufügen der Klasse für richtige Ausgabe
       } else {
         document.getElementById('output').innerHTML = 'Falsche Eingabe. Versuche es erneut.';
